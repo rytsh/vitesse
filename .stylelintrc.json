@@ -1,0 +1,6 @@
+{
+  "extends": ["stylelint-config-sass-guidelines", "stylelint-config-standard"],
+  "rules": {
+    "selector-max-id": 2
+  }
+}
