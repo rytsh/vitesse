@@ -1,2 +1,3 @@
-// / <reference types="svelte" />
-// / <reference types="vite/client" />
+/* eslint-disable spaced-comment */
+/// <reference types="svelte" />
+/// <reference types="vite/client" />
