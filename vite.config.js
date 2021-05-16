@@ -5,6 +5,7 @@ import preprocess from "svelte-preprocess";
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: "./",
   plugins: [svelte({ preprocess: preprocess({ name: "scss" }) })],
   resolve: {
     alias: {

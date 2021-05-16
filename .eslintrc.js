@@ -24,10 +24,12 @@ module.exports = {
     },
   ],
   "settings": {
+    "html/html-extensions": [".html"],
     "svelte3/typescript": require("typescript"),
     "svelte3/ignore-styles": () => true,
   },
   "rules": {
+    "indent": ["error", 2],
     "new-cap": "off",
     "@typescript-eslint/no-explicit-any": "off",
     "object-curly-spacing": ["error", "always"],
