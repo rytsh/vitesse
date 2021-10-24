@@ -1,34 +1,12 @@
-@use './variables';
+@import 'modern-normalize/modern-normalize.css';
+
+// tailwindcss
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 
 html,
-body,
-#app {
-  height: 100%;
-  position: relative;
-  width: 100%;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-}
-
 body {
-  box-sizing: border-box;
-  color: var(--text);
-  font-family: var(--systemFont);
-  margin: 0;
-}
-
-::selection {
-  background-color: var(--red);
-  color: var(--white);
-}
-
-.ndisplay {
-  display: none;
-}
-
-.nvisible {
-  visibility: hidden;
+  height: 100%;
+  width: 100%;
 }

@@ -6,10 +6,9 @@ module.exports = {
   },
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
-    // add these parser options
-    // "tsconfigRootDir": __dirname,
-    // "project": ["./tsconfig.json"],
-    "extraFileExtensions": [".svelte"],
+    "tsconfigRootDir": __dirname,
+    "project": ["./tsconfig.json"],
+    "extraFileExtensions": [".svelte", ".html"],
   },
   "extends": [
     "eslint:recommended",

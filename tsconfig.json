@@ -26,13 +26,22 @@
     "allowJs": false,
     "checkJs": false,
     "paths": {
-      "@/*": ["src/*"]
+      "@/*": [
+        "src/*"
+      ]
     }
   },
   /**
    * Use global.d.ts instead of compilerOptions.types
    * to avoid limiting type declarations.
    */
-  "include": ["src/**/*.d.ts", "src/**/*.ts", "src/**/*.js", "src/**/*.svelte"],
+  "include": [
+    "src/**/*.d.ts",
+    "src/**/*.ts",
+    "src/**/*.js",
+    "src/**/*.svelte",
+    "**/*.config.js",
+    "**/*.*rc.js",
+  ],
   "extends": "@tsconfig/svelte/tsconfig.json"
 }

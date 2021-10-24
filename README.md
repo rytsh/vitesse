@@ -2,6 +2,13 @@
 
 Vite + Svelte template with good stuffs.
 
+## Features
+
+__-__ SCSS, Tailwind, modern-normalize
+__-__ pnpm repo
+__-__ eslint + stylelint and prettier disabled!
+__-__ gh-pages
+
 ---
 
 First initialize get this repo with `degit`.
