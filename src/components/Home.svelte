@@ -43,8 +43,6 @@
 </div>
 
 <style lang="scss">
-  @import url("https://fonts.googleapis.com/css2?family=Waiting+for+the+Sunrise&display=swap");
-
   .middle {
     align-items: center;
     display: flex;
@@ -58,7 +56,7 @@
     white-space: nowrap; /* Keeps the content on a single line */
     margin: 0 auto; /* Gives that scrolling effect as the typing happens */
     letter-spacing: 0.15em; /* Adjust as needed */
-    font-family: "Waiting for the Sunrise", cursive;
+    font-family: cursive;
     font-size: 72pt;
     animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
   }

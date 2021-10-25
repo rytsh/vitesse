@@ -4,10 +4,11 @@ Vite + Svelte template with good stuffs.
 
 ## Features
 
-__-__ SCSS, Tailwind, modern-normalize
-__-__ pnpm repo
-__-__ eslint + stylelint and prettier disabled!
-__-__ gh-pages
+__-__ SCSS, Tailwind  
+__-__ pnpm repo  
+__-__ eslint + stylelint and prettier disabled!  
+__-__ .vscode config and recommended list  
+__-__ gh-pages  
 
 ---
 
