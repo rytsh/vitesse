@@ -37,7 +37,7 @@
 <div class="middle">
   <div>
     {#if mounted}
-      <span class="typewriter text-gray-800" in:typewriter />
+      <span class="typewriter text-gray-800 " in:typewriter />
     {/if}
   </div>
 </div>
@@ -48,6 +48,7 @@
     display: flex;
     height: 100%;
     justify-content: center;
+    margin: 0 5px;
   }
 
   .typewriter {
@@ -57,8 +58,9 @@
     margin: 0 auto; /* Gives that scrolling effect as the typing happens */
     letter-spacing: 0.15em; /* Adjust as needed */
     font-family: cursive;
-    font-size: 72pt;
+    font-size: 5vw;
     animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+    white-space: normal;
   }
 
   /* The typing effect */

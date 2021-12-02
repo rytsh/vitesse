@@ -1,4 +1,4 @@
-# Vitesse
+# ViteSvelte
 
 Vite + Svelte template with good stuffs.
 

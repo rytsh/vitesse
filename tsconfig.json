@@ -42,6 +42,10 @@
     "src/**/*.svelte",
     "**/*.config.js",
     "**/*.*rc.js",
+    "**/*.html",
+  ],
+  "exclude": [
+    "node_modules/*"
   ],
   "extends": "@tsconfig/svelte/tsconfig.json"
 }

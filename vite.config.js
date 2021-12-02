@@ -1,6 +1,6 @@
 import * as path from "path";
 import { defineConfig } from "vite";
-import svelte from "@sveltejs/vite-plugin-svelte";
+import { svelte } from "@sveltejs/vite-plugin-svelte";
 import preprocess from "svelte-preprocess";
 
 // https://vitejs.dev/config/
@@ -18,7 +18,7 @@ export default defineConfig({
   server: {
     proxy: {
       "/api": {
-        target: "http://localhost:5555",
+        target: "http://localhost:" + process.env.PORT ?? 3000,
         changeOrigin: true,
         secure: true,
         ws: true,
