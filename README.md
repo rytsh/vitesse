@@ -9,6 +9,7 @@ __-__ pnpm repo
 __-__ eslint + stylelint and prettier disabled!  
 __-__ .vscode config and recommended list  
 __-__ gh-pages  
+__-__ proxy settings
 
 ---
 

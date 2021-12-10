@@ -31,4 +31,5 @@
     "editor.defaultFormatter": "svelte.svelte-vscode"
   },
   "files.insertFinalNewline": true,
+  "scss.lint.unknownAtRules": "ignore",
 }
