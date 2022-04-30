@@ -28,6 +28,12 @@
     "paths": {
       "@/*": [
         "src/*"
+      ],
+      "$lib": [
+        "src/lib"
+      ],
+      "$lib/*": [
+        "src/lib/*"
       ]
     }
   },
@@ -43,9 +49,12 @@
     "**/*.config.js",
     "**/*.*rc.js",
     "**/*.html",
+    ".eslintrc.cjs",
+    "postcss.config.cjs",
+    "tailwind.config.cjs",
   ],
   "exclude": [
     "node_modules/*"
   ],
-  "extends": "@tsconfig/svelte/tsconfig.json"
+  "extends": "./.svelte-kit/tsconfig.json",
 }

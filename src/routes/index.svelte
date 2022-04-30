@@ -1,18 +1,10 @@
 <script lang="ts">
   import { onMount } from "svelte";
+  import { storeData } from "@/lib/store/store";
 
-  const userLanguages = navigator.languages;
-
-  const worlds = {
-    en: "Hello, World!",
-    tr: "Ah yalan dünya..",
-  };
+  const worlds = $storeData;
 
   let hi = worlds["en"];
-
-  if (userLanguages.includes("tr")) {
-    hi = worlds["tr"];
-  }
 
   let mounted = false;
 
@@ -30,6 +22,11 @@
   };
 
   onMount(() => {
+    const userLanguages = navigator.languages;
+    if (userLanguages.includes("tr")) {
+      hi = worlds["tr"];
+    }
+
     mounted = true;
   });
 </script>
@@ -37,7 +34,7 @@
 <div class="middle">
   <div>
     {#if mounted}
-      <span class="typewriter text-gray-800 " in:typewriter />
+      <span class="typewriter text-gray-800" in:typewriter />
     {/if}
   </div>
 </div>
@@ -79,24 +76,7 @@
       border-color: transparent;
     }
     50% {
-      border-color: tomato;
+      border-color: #ff6347;
     }
   }
-  // .typewriter {
-  //   animation: blink-caret 0.75s step-end infinite;
-  //   border-right: 0.1em solid var(--red); /* The typwriter cursor */
-  //   font-family: "Waiting for the Sunrise", cursive;
-  //   font-size: 72pt;
-  // }
-
-  // /* The typewriter cursor effect */
-  // @keyframes blink-caret {
-  //   from,
-  //   to {
-  //     border-color: transparent;
-  //   }
-  //   50% {
-  //     border-color: var(--red);
-  //   }
-  // }
 </style>

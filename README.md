@@ -1,6 +1,6 @@
-# ViteSvelte
+# Web Template
 
-Vite + Svelte template with good stuffs.
+SvelteKIT template with good stuffs.
 
 ## Features
 
