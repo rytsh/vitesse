@@ -1,6 +1,8 @@
-# ViteSvelte
+# Web Template
 
 Vite + Svelte template with good stuffs.
+
+If you want to use sveltekit check __main__ branch
 
 ## Features
 
@@ -16,7 +18,7 @@ __-__ proxy settings
 First initialize get this repo with `degit`.
 
 ```sh
-degit https://github.com/rytsh/vitesse.git#main my-new-project
+degit https://github.com/rytsh/vitesse.git#svelte my-new-project
 ```
 
 ```sh
