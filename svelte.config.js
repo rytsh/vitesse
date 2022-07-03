@@ -2,11 +2,15 @@ import adapter from "@sveltejs/adapter-static";
 import preprocess from "svelte-preprocess";
 import * as path from "path";
 
+import "dotenv/config";
+
 import { fileURLToPath } from "url";
 import { dirname } from "path";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
+
+const basePath = process.env.BASEPATH;
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -16,13 +20,15 @@ const config = {
   compilerOptions: {
     sourcemap: !(process.env.NODE_ENV == "production" && process.env.npm_lifecycle_event != "dev"),
   },
-
-  paths: {
-    base: "./",
-  },
-
   kit: {
     adapter: adapter(),
+    browser: {
+      hydrate: true,
+      router: false,
+    },
+    paths: {
+      base: basePath,
+    },
     prerender: {
       default: true,
     },

@@ -2,6 +2,8 @@
 
 SvelteKIT template with good stuffs.
 
+If you want to use svelte check __svelte__ branch.
+
 ## Features
 
 __-__ SCSS, Tailwind  
