@@ -2,8 +2,6 @@
 
 Vite + Svelte template with good stuffs.
 
-If you want to use sveltekit check __main__ branch
-
 > __-__ SCSS, Tailwind  
 > __-__ pnpm repo  
 > __-__ eslint + stylelint  
@@ -12,9 +10,9 @@ If you want to use sveltekit check __main__ branch
 > __-__ gh-pages  
 > __-__ proxy settings
 
----
+## Usage
 
-First initialize get this repo with `degit`.
+Get this repo with `degit`.
 
 ```sh
 degit https://github.com/rytsh/vitesse.git my-new-project
@@ -28,7 +26,7 @@ pnpm install
 Run project
 
 ```sh
-PORT=3003 pnpm run dev
+pnpm run dev
 ```
 
 Build
