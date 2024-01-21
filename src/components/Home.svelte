@@ -16,13 +16,13 @@
 
   let mounted = false;
 
-  const typewriter = (node, { speed = 200 }) => {
+  const typewriter = (node: any) => {
     const text = hi;
-    const duration = text.length * speed;
+    const duration = text.length * 200;
 
     return {
       duration,
-      tick: (t) => {
+      tick: (t: any) => {
         const i = ~~(text.length * t);
         node.textContent = text.slice(0, i);
       },
@@ -37,7 +37,7 @@
 <div class="middle">
   <div>
     {#if mounted}
-      <span class="typewriter text-gray-800 " in:typewriter />
+      <span class="typewriter text-gray-800" in:typewriter />
     {/if}
   </div>
 </div>
@@ -58,7 +58,9 @@
     margin: 0 auto; /* Gives that scrolling effect as the typing happens */
     letter-spacing: 0.15em; /* Adjust as needed */
     font-size: 8vw;
-    animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+    animation:
+      typing 3.5s steps(40, end),
+      blink-caret 0.75s step-end infinite;
     white-space: normal;
   }
 
@@ -82,21 +84,4 @@
       border-color: tomato;
     }
   }
-  // .typewriter {
-  //   animation: blink-caret 0.75s step-end infinite;
-  //   border-right: 0.1em solid var(--red); /* The typwriter cursor */
-  //   font-family: "Waiting for the Sunrise", cursive;
-  //   font-size: 72pt;
-  // }
-
-  // /* The typewriter cursor effect */
-  // @keyframes blink-caret {
-  //   from,
-  //   to {
-  //     border-color: transparent;
-  //   }
-  //   50% {
-  //     border-color: var(--red);
-  //   }
-  // }
 </style>
