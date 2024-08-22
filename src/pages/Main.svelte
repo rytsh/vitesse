@@ -6,5 +6,5 @@
 </script>
 
 <div class="flex w-full h-full justify-center align-middle">
-  <span class="text-2xl">Welcome!</span>
+  <span class="text-2xl self-center">Welcome!</span>
 </div>

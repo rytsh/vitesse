@@ -43,8 +43,8 @@
     </div>
   {:else}
     <Sidebar />
-    <div class="h-full w-full grid grid-rows-2">
-      <Navbar class="h-7" />
+    <div class="h-full w-full grid grid-rows-[1.75rem]">
+      <Navbar />
       <Router {routes} />
     </div>
   {/if}
