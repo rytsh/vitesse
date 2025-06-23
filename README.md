@@ -2,7 +2,7 @@
 
 Vite + Svelte template with good stuffs.
 
-> __-__ SCSS, Tailwind  
+> __-__ Tailwind  
 > __-__ pnpm repo  
 > __-__ stylelint  
 > __-__ prettier disabled!  
