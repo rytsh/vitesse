@@ -4,7 +4,7 @@ Vite + Svelte template with good stuffs.
 
 > __-__ SCSS, Tailwind  
 > __-__ pnpm repo  
-> __-__ eslint + stylelint  
+> __-__ stylelint  
 > __-__ prettier disabled!  
 > __-__ .vscode config and recommended list  
 > __-__ gh-pages  
