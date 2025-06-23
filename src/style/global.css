@@ -1,5 +1,5 @@
 /* stylelint-disable import-notation, at-rule-no-deprecated */
-@use 'tailwindcss';
+@import 'tailwindcss';
 
 html,
 body {

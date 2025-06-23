@@ -29,7 +29,7 @@
   {/each}
 </div>
 
-<style lang="scss">
+<style>
   .alert {
     background-color: #f8d7da;
     color: #721c24;

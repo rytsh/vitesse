@@ -32,9 +32,10 @@
 
 <div
   bind:this={layout}
-  class="grid h-full w-full relative overflow-y-auto bg-slate-100"
-  class:grid-cols-[8rem,1fr]={$storeNavbar.sideBarOpen}
-  class:grid-cols-[0,1fr]={!$storeNavbar.sideBarOpen}
+  class={[
+    "grid grid-flow-col h-full w-full relative overflow-y-auto bg-slate-100",
+    $storeNavbar.sideBarOpen ? "grid-cols-[8rem]" : "grid-cols-[0]",
+  ]}
 >
   {#if !mounted}
     <div class="absolute inset-0 flex items-center justify-center">
