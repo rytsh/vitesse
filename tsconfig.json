@@ -38,6 +38,7 @@
     "**/*.config.js",
     "**/*.*rc.js",
     "**/*.html",
+    "postcss.config.mjs",
   ],
   "exclude": [
     "node_modules/*"

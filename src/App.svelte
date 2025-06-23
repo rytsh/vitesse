@@ -1,6 +1,7 @@
 <script lang="ts">
   import { onMount } from "svelte";
-  import type { ComponentType } from "svelte";
+  // import type { ComponentType } from "svelte";
+  type RouteComponent = typeof MainPage;
   import Router from "svelte-spa-router";
 
   import { storeNavbar } from "@/store/store";
@@ -17,7 +18,7 @@
   let layout: HTMLElement;
   let mounted = false;
 
-  const routes = new Map<string | RegExp, ComponentType>();
+  const routes = new Map<string | RegExp, RouteComponent>();
   routes.set("/test", TestPage);
   routes.set("/", MainPage);
   routes.set("/*", NotFound);

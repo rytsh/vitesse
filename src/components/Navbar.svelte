@@ -14,7 +14,7 @@
     class="mr-2 hover:bg-slate-700 flex items-center h-full px-1"
     on:click={() =>
       storeNavbar.update((v) =>
-        update(v, { sideBarOpen: { $set: !v.sideBarOpen } }),
+        update(v, { sideBarOpen: { $set: !v.sideBarOpen } })
       )}
   >
     <Icon
