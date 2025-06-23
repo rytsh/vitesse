@@ -39,6 +39,7 @@
     "**/*.*rc.js",
     "**/*.html",
     "postcss.config.mjs",
+    "svelte.config.mjs",
   ],
   "exclude": [
     "node_modules/*"
