@@ -43,9 +43,6 @@
 
   :global(.sb-link-active) {
     @apply bg-black text-white;
-    > span {
-      @apply border-green-500;
-    }
   }
 
   :global(.sb-link-inactive) {
