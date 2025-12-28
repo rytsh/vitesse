@@ -1,7 +1,6 @@
 {
   "recommendations": [
     "svelte.svelte-vscode",
-    "dbaeumer.vscode-eslint",
     "stylelint.vscode-stylelint"
   ]
 }

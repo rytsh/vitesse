@@ -1,4 +1,4 @@
-/* stylelint-disable import-notation, at-rule-no-deprecated */
+/* stylelint-disable-next-line import-notation */
 @import 'tailwindcss';
 
 html,

@@ -1,31 +1,29 @@
 <script lang="ts">
-  import active from "svelte-spa-router/active";
+  import { link, location } from 'svelte-spa-router';
 </script>
 
 <div class="sidebar-bg border-r border-black">
   <div class="sticky top-0 overflow-auto max-h-svh no-scrollbar">
     <div class="border-b border-black h-7">
       <a
-        href="#/"
-        class="block h-full hover:bg-slate-700 hover:text-white"
-        use:active={{
-          path: `/`,
-          className: "bg-black text-white",
-          inactiveClassName: "bg-white text-black",
-        }}
+        href="/"
+        use:link
+        class={[
+          'block h-full hover:bg-slate-700 hover:text-white',
+          $location === '/' ? 'bg-black text-white' : 'bg-white text-black'
+        ]}
       >
         <span class="block px-2">Main</span>
       </a>
     </div>
     <div class="border-b border-black h-7">
       <a
-        href="#/test"
-        class="block h-full hover:bg-slate-700 hover:text-white"
-        use:active={{
-          path: `/test`,
-          className: "bg-black text-white",
-          inactiveClassName: "bg-white text-black",
-        }}
+        href="/test"
+        use:link
+        class={[
+          'block h-full hover:bg-slate-700 hover:text-white',
+          $location === '/test' ? 'bg-black text-white' : 'bg-white text-black'
+        ]}
       >
         <span class="block px-2">Test</span>
       </a>
@@ -39,14 +37,6 @@
   .sidebar-bg {
     background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAB1JREFUKFNjvHjx4n99fX1GBgKAcVQhvhCifvAAAM43KAsXWPfwAAAAAElFTkSuQmCC)
       repeat;
-  }
-
-  :global(.sb-link-active) {
-    @apply bg-black text-white;
-  }
-
-  :global(.sb-link-inactive) {
-    @apply bg-white text-black;
   }
 
   /* Hide scrollbar for Chrome, Safari and Opera */

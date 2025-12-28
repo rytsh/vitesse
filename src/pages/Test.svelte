@@ -1,8 +1,7 @@
 <script lang="ts">
-  import { storeNavbar } from "@/store/store";
-  import update from "immutability-helper";
+  import { storeNavbar } from '@/lib/store/store.svelte';
 
-  storeNavbar.update((v) => update(v, { title: { $set: "Test" } }));
+  storeNavbar.title = 'Test';
 </script>
 
 <h1>Test</h1>
