@@ -1,30 +1,39 @@
 <script lang="ts">
   import { removeToast, storeToast } from '@/lib/store/toast.svelte';
-  import { ChevronRight } from 'lucide-svelte';
+  import { Info, TriangleAlert, CircleAlert, X } from 'lucide-svelte';
 
   const close = (id: number) => {
     removeToast(id);
   };
+
+  const icons = { info: Info, warn: TriangleAlert, alert: CircleAlert };
+
   const customSlide = (_: HTMLElement, { duration }: { duration: number }) => {
     return {
       duration,
-      css: (_: number, u: number) => `transform: translateX(${u * 400}px)`
+      css: (t: number) => `opacity: ${t}; transform: translateY(${(1 - t) * -8}px)`
     };
   };
 </script>
 
-<div class="fixed bottom-0 right-0 z-50">
+<div class="fixed bottom-0 right-0 z-50 flex flex-col gap-1.5 w-80 p-2">
   {#each storeToast as toast (toast.id)}
+    {@const Icon = icons[toast.type]}
     <div
-      class={`${toast.type} flex p-2 h-12 items-center border-l border-t border-gray-700 w-[28rem]`}
-      transition:customSlide={{ duration: 250 }}
+      class={[
+        'toast-item',
+        toast.type,
+      ]}
+      transition:customSlide={{ duration: 150 }}
     >
-      <button onclick={() => close(toast.id)} class="hover:fill-red-500">
-        <ChevronRight />
+      <Icon size={15} strokeWidth={2} />
+      <span class="flex-1 truncate">{toast.message}</span>
+      <button
+        class="close-btn"
+        onclick={() => close(toast.id)}
+      >
+        <X size={13} strokeWidth={2} />
       </button>
-      <div class="pl-2">
-        <span>{toast.message}</span>
-      </div>
     </div>
   {/each}
 </div>
@@ -32,15 +41,23 @@
 <style>
   @reference "tailwindcss";
 
-  .alert {
-    @apply bg-red-100 text-red-800;
+  .toast-item {
+    @apply flex items-center gap-2 px-2.5 py-2 text-xs border rounded;
+  }
+
+  .close-btn {
+    @apply flex-shrink-0 opacity-40 hover:opacity-100 cursor-pointer;
   }
 
   .info {
-    @apply bg-teal-100 text-teal-800;
+    @apply bg-sky-50 text-sky-800 border-sky-200;
   }
 
   .warn {
-    @apply bg-yellow-100 text-yellow-800;
+    @apply bg-amber-50 text-amber-800 border-amber-200;
+  }
+
+  .alert {
+    @apply bg-rose-50 text-rose-800 border-rose-200;
   }
 </style>

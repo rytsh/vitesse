@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { link, location } from 'svelte-spa-router';
+  import { link, router } from 'svelte-spa-router';
 </script>
 
 <div class="sidebar-bg border-r border-black">
@@ -10,7 +10,7 @@
         use:link
         class={[
           'block h-full hover:bg-slate-700 hover:text-white',
-          $location === '/' ? 'bg-black text-white' : 'bg-white text-black'
+          router.location === '/' ? 'bg-black text-white' : 'bg-white text-black'
         ]}
       >
         <span class="block px-2">Main</span>
@@ -22,7 +22,7 @@
         use:link
         class={[
           'block h-full hover:bg-slate-700 hover:text-white',
-          $location === '/test' ? 'bg-black text-white' : 'bg-white text-black'
+          router.location === '/test' ? 'bg-black text-white' : 'bg-white text-black'
         ]}
       >
         <span class="block px-2">Test</span>
